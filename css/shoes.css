@@ -1,0 +1,151 @@
+/* Shoes Page Styles */
+.shoes-page-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.shoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.shoe-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.shoe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(45, 80, 22, 0.3);
+}
+
+.shoe-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.shoe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.shoe-card:hover .shoe-image {
+    transform: scale(1.05);
+}
+
+.shoe-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.shoe-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.shoe-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2d5016;
+}
+
+/* Hover overlay for shoes page */
+.shoe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 80, 22, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.shoe-card:hover .shoe-overlay {
+    opacity: 1;
+}
+
+.shoe-description {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.shoe-sizes {
+    text-align: center;
+}
+
+.shoe-sizes-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.shoe-size-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.shoe-size-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive design for shoes page */
+@media (max-width: 1024px) {
+    .shoes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shoes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .shoe-image-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shoes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .shoe-image-container {
+        height: 300px;
+    }
+}
+

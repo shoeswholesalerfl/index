@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 顶部公司名称 */
+.header {
+    background: linear-gradient(135deg, #2d5016 0%, #3d6b1f 100%);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-name {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #4a7c2a;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 18px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #3d6b1f;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Banner轮播区域 */
+.banner-section {
+    position: relative;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.banner-slide {
+    min-width: 33.333%;
+    width: 33.333%;
+    height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(45, 80, 22, 0.8);
+    color: white;
+    border: none;
+    font-size: 2.5em;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.banner-arrow:hover {
+    background-color: rgba(45, 80, 22, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.banner-arrow-left {
+    left: 15px;
+}
+
+.banner-arrow-right {
+    right: 15px;
+}
+
+.banner-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.banner-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-dot.active {
+    background-color: #2d5016;
+    transform: scale(1.2);
+}
+
+/* 广告条幅区域 */
+.ad-banner-section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.ad-banner {
+    background: linear-gradient(135deg, #4a7c2a 0%, #5a9a3a 100%);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ad-placeholder {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+/* 商品展示区域 */
+.products-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #2d5016;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: calc(25% - 20px);
+    min-width: 250px;
+    max-width: 280px;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(45, 80, 22, 0.3);
+}
+
+.product-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2d5016;
+}
+
+/* Hover时显示的商品详情 */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 80, 22, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-description {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.product-sizes {
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.product-sizes-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.size-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.size-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 1.8em;
+    }
+
+    .nav-link {
+        padding: 15px 25px;
+        font-size: 1em;
+    }
+
+    .banner-slide {
+        min-width: 50%;
+        width: 50%;
+        height: 250px;
+    }
+
+    .product-card {
+        width: calc(50% - 15px);
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 1.5em;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner-slide {
+        min-width: 100%;
+        width: 100%;
+        height: 200px;
+    }
+
+    .banner-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 2em;
+    }
+}
+
+/* Customer Reviews Section */
+.reviews-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.reviews-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.review-slide {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.review-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a7c2a;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.review-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.review-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ffc107;
+}
+
+.review-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    font-style: italic;
+}
+
+.review-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(45, 80, 22, 0.8);
+    color: white;
+    border: none;
+    font-size: 2.5em;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.review-arrow:hover {
+    background-color: rgba(45, 80, 22, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.review-arrow-left {
+    left: 10px;
+}
+
+.review-arrow-right {
+    right: 10px;
+}
+
+.review-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.review-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-dot.active {
+    background-color: #2d5016;
+    transform: scale(1.2);
+}
+
+/* Responsive design for reviews */
+@media (max-width: 768px) {
+    .reviews-container {
+        padding: 30px 50px;
+    }
+
+    .review-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .review-name {
+        font-size: 1.3em;
+    }
+
+    .review-text {
+        font-size: 1em;
+    }
+
+    .review-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-container {
+        padding: 20px 40px;
+    }
+
+    .review-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .review-name {
+        font-size: 1.2em;
+    }
+
+    .review-text {
+        font-size: 0.95em;
+    }
+
+    .review-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5em;
+    }
+
+    .review-arrow-left {
+        left: 5px;
+    }
+
+    .review-arrow-right {
+        right: 5px;
+    }
+}
+
