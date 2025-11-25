@@ -109,7 +109,7 @@ const shoes = [
         id: 1,
         name: 'Classic Running Shoes',
         price: '$89.99',
-        image: '../pics/Image_2025-11-19_120304_072.jpg',
+        image: 'pics/Image_2025-11-19_120304_072.jpg',
         description: 'Comfortable and breathable classic running shoes, perfect for daily wear and light exercise. Made with premium materials for excellent support and cushioning.',
         sizes: ['7', '7.5', '8', '8.5', '9', '9.5', '10']
     },
@@ -117,7 +117,7 @@ const shoes = [
         id: 2,
         name: 'Casual Sneakers',
         price: '$69.99',
-        image: '../pics/Image_2025-11-19_120528_252.jpg',
+        image: 'pics/Image_2025-11-19_120528_252.jpg',
         description: 'Stylish and versatile casual sneakers with a minimalist design, suitable for any occasion. Lightweight and comfortable for your daily adventures.',
         sizes: ['6.5', '7', '7.5', '8', '8.5', '9', '9.5']
     },
@@ -125,7 +125,7 @@ const shoes = [
         id: 3,
         name: 'Athletic Training Shoes',
         price: '$119.99',
-        image: '../pics/Image_2025-11-24_200132_953.jpg',
+        image: 'pics/Image_2025-11-24_200132_953.jpg',
         description: 'Professional training shoes with advanced cushioning technology to protect every step. Ideal for long-distance running and training sessions.',
         sizes: ['7.5', '8', '8.5', '9', '9.5', '10', '10.5']
     },
@@ -133,7 +133,7 @@ const shoes = [
         id: 4,
         name: 'Business Dress Shoes',
         price: '$149.99',
-        image: '../pics/Image_2025-11-24_200135_616.jpg',
+        image: 'pics/Image_2025-11-24_200135_616.jpg',
         description: 'Elegant business dress shoes crafted from premium leather with exquisite craftsmanship. Perfect for formal occasions and business events.',
         sizes: ['8', '8.5', '9', '9.5', '10', '10.5']
     }
@@ -145,7 +145,7 @@ const beauty = [
         id: 1,
         name: 'Premium Synthetic Wig',
         price: '$79.99',
-        image: '../pics/Image_2025-11-24_200258_845.jpg',
+        image: 'pics/Image_2025-11-24_200258_845.jpg',
         description: 'High-quality synthetic wig with natural-looking texture and shine. Easy to style and maintain, perfect for everyday wear or special occasions. Available in multiple colors and lengths.',
         sizes: null
     },
@@ -153,7 +153,7 @@ const beauty = [
         id: 2,
         name: 'Luxury Eyelash Extensions',
         price: '$24.99',
-        image: '../pics/Image_2025-11-24_200314_361.jpg',
+        image: 'pics/Image_2025-11-24_200314_361.jpg',
         description: 'Premium false eyelashes made from high-quality synthetic fibers. Natural-looking and comfortable to wear. Easy to apply and remove, perfect for enhancing your natural beauty.',
         sizes: null
     },
@@ -161,7 +161,7 @@ const beauty = [
         id: 3,
         name: 'Human Hair Wig',
         price: '$199.99',
-        image: '../pics/Image_2025-11-24_200316_060.jpg',
+        image: 'pics/Image_2025-11-24_200316_060.jpg',
         description: 'Premium 100% human hair wig with natural texture and movement. Can be styled, colored, and treated just like your own hair. Durable and long-lasting for everyday use.',
         sizes: null
     },
@@ -169,7 +169,7 @@ const beauty = [
         id: 4,
         name: 'Volume Eyelash Set',
         price: '$19.99',
-        image: '../pics/Image_2025-11-24_200335_042.jpg',
+        image: 'pics/Image_2025-11-24_200335_042.jpg',
         description: 'Dramatic volume eyelash extensions for a bold, glamorous look. Made from soft, lightweight materials that feel comfortable all day. Perfect for parties and special events.',
         sizes: null
     }
@@ -181,7 +181,7 @@ const toys = [
         id: 1,
         name: 'Action Figure Set',
         price: '$29.99',
-        image: '../pics/Image_2025-11-24_200337_138.jpg',
+        image: 'pics/Image_2025-11-24_200337_138.jpg',
         description: 'Premium action figure set with multiple accessories and interchangeable parts. Highly detailed and poseable, perfect for collectors and kids alike.',
         sizes: null
     },
@@ -189,7 +189,7 @@ const toys = [
         id: 2,
         name: 'Building Blocks Set',
         price: '$39.99',
-        image: '../pics/Image_2025-11-24_200348_360.jpg',
+        image: 'pics/Image_2025-11-24_200348_360.jpg',
         description: 'Creative building blocks set with various shapes and colors. Encourages creativity and problem-solving skills. Compatible with other major building block brands.',
         sizes: null
     },
@@ -197,7 +197,7 @@ const toys = [
         id: 3,
         name: 'Remote Control Car',
         price: '$49.99',
-        image: '../pics/Image_2025-11-24_200350_084.jpg',
+        image: 'pics/Image_2025-11-24_200350_084.jpg',
         description: 'High-speed remote control car with advanced features. Durable construction, long battery life, and responsive controls. Perfect for indoor and outdoor play.',
         sizes: null
     },
@@ -205,7 +205,7 @@ const toys = [
         id: 4,
         name: 'Educational Puzzle Set',
         price: '$24.99',
-        image: '../pics/Image_2025-11-24_200403_959.jpg',
+        image: 'pics/Image_2025-11-24_200403_959.jpg',
         description: 'Educational puzzle set designed to enhance cognitive skills and problem-solving abilities. Made from safe, non-toxic materials. Suitable for children of all ages.',
         sizes: null
     }
