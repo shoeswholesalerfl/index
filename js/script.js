@@ -389,8 +389,55 @@ function initReviews() {
     // setInterval(nextReview, 6000);
 }
 
+// Popup Modal Functionality
+function initPopup() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    
+    if (!popupOverlay) return;
+    
+    // Check if user has visited in this session (using sessionStorage)
+    const hasVisitedInSession = sessionStorage.getItem('hasVisitedIndex');
+    
+    // Check if user came from another page on the same domain
+    const referrer = document.referrer;
+    const currentDomain = window.location.origin;
+    const cameFromSameDomain = referrer && referrer.startsWith(currentDomain) && !referrer.endsWith('index.html');
+    
+    // Show popup only if:
+    // 1. User hasn't visited in this session (first time in this browser session)
+    // 2. User didn't come from another page on the same domain (direct access or external link)
+    if (!hasVisitedInSession && !cameFromSameDomain) {
+        popupOverlay.classList.add('active');
+        // Mark as visited in this session
+        sessionStorage.setItem('hasVisitedIndex', 'true');
+    }
+    
+    // Close popup when close button is clicked
+    if (popupClose) {
+        popupClose.addEventListener('click', () => {
+            if (popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+    }
+    
+    // Optional: Close popup when clicking on overlay (outside the popup)
+    // Uncomment the following code if you want this behavior:
+    /*
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+    }
+    */
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
+    initPopup();
     initBanner();
     renderProducts();
     initNavigation();
